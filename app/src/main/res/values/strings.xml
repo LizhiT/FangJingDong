@@ -1,0 +1,28 @@
+<resources>
+
+    <string name="ceshi">一二三四五六七一二三四五六七一二三四五六七一二三四五六七</string>
+
+
+    <string name="app_name">京东</string>
+
+    <string name="flash_into">跳转</string>
+    <string name="flash_daojishi">3</string>
+
+    <string name="home_tuijiantext">为 / 你 / 推 / 荐</string>
+    <string name="home_miaosha">京东秒杀</string>
+    <string name="home_jingdongtuijian">京东推荐</string>
+    <string name="home_jingdongmiaosha">京东秒杀</string>
+    <string name="home_gengduo">更多</string>
+
+    <string name="detail_addcart">加入购物车</string>
+    <string name="detail_gonghuoshang">供货商</string>
+    <string name="detail_dianpu">店铺</string>
+    <string name="detail_goods">商品</string>
+    <string name="detail_guanzhu">关注</string>
+    <string name="detail_gouwuche">购物车</string>
+
+
+    <string name="denglu_longtext">登录即代表您已同意京东隐私政策</string>
+    <string name="cart_textchange">登录后用于同步电脑和手机的商品</string>
+
+</resources>

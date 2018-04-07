@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    tools:context="lizhi.bwie.com.jingdongcom.view.activity.SearchActivity">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorWrite"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="7dp"
+            android:background="@drawable/leftjiantou"
+            android:gravity="center"
+            android:onClick="intenthomefragment" />
+        <!--搜索-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/sousuokuang">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/shape_corner"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/a_4" />
+
+                <EditText
+                    android:id="@+id/search_text"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_weight="5"
+                    android:background="#fff"
+                    android:clickable="false"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textSize="14dp"
+                    android:hint="年货超级秒杀,好货低至1折"
+                    android:textColor="#ccc" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/root" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="addlist"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="搜索"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/views"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_below="@id/top"
+        android:background="@drawable/jianbian" />
+
+    <TextView
+        android:id="@+id/resou"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/views"
+        android:background="@color/colorWrite"
+        android:padding="10dp"
+        android:text="热搜"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_h"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resou"
+        android:background="@color/colorWrite"
+        android:paddingLeft="10dp"></android.support.v7.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/delehistory"
+        android:onClick="delehistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listviewx"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bian_kuang_line2"
+        android:text="清空历史搜索"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recycler_h"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorWrite"
+        android:padding="10dp"
+        android:text="历史搜索"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/listviewx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/history"
+        android:background="@color/colorWrite"></ListView>
+</RelativeLayout>

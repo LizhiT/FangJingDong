@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="lizhi.bwie.com.jingdongcom.view.activity.RegistActivity">
+
+    <RelativeLayout
+        android:id="@+id/login_title_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/cha_iamge"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/cha" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="注册" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_title_relative"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账号" />
+
+            <EditText
+                android:id="@+id/edit_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入手机号"
+                android:paddingLeft="30dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密码" />
+
+            <EditText
+                android:id="@+id/edit_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:paddingLeft="30dp"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#ccc"
+            android:gravity="center"
+            android:onClick="resign"
+            android:text="注册"
+            android:textColor="@color/colorWrite"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

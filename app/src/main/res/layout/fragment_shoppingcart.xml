@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/detail_image_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignTop="@+id/imageView4"
+            android:layout_toEndOf="@+id/textView"
+            android:layout_toRightOf="@+id/textView"
+            android:padding="5dp"
+            android:src="@drawable/ding_wei" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="购物车"
+            android:textSize="18dp" />
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="12dp"
+            android:padding="5dp"
+            android:src="@drawable/a9v" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_below="@id/text_title"
+        android:background="@color/colorGray" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linear_bottom"
+        android:layout_below="@+id/text_title">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--二级列表////登录的按钮-->
+                <lizhi.bwie.com.jingdongcom.util.MyExpanableView
+                    android:id="@+id/my_expanable_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                </lizhi.bwie.com.jingdongcom.util.MyExpanableView>
+
+                <ImageView
+                    android:id="@+id/empty_cart_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/empty_cart"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@color/colorGray" />
+
+                <LinearLayout
+                    android:id="@+id/linear_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/cart_login"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bian_kuang_line3"
+                        android:gravity="center"
+                        android:text="登录" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="@string/cart_textchange" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@color/colorGray" />
+                <!--为你推荐-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <lizhi.bwie.com.jingdongcom.util.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F2F0F4"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/home_tuijiantext"
+                        android:textSize="16dp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/tui_jian_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relative_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linear_bottom"
+        android:layout_below="@+id/text_title"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cart_check_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/check_box_selector"
+            android:button="@null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="全选" />
+
+        <TextView
+            android:id="@+id/text_total"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_weight="1"
+            android:text="合计:¥0.00"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/text_buy"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:background="#f00"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="去结算(0)"
+            android:textColor="#fff"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+</RelativeLayout>

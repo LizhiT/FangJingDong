@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    android:orientation="vertical"
+    tools:context="lizhi.bwie.com.jingdongcom.view.activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"></FrameLayout>
+
+    <View
+        android:id="@+id/v"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@drawable/jianbian" />
+
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="9"
+        android:background="@color/colorWrite"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/select_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_home"
+            android:button="@null"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/select_classify"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_classify"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/select_discover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_discover"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/select_buycart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_buycart"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/select_mine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_mine"
+            android:button="@null" />
+    </RadioGroup>
+</LinearLayout>
